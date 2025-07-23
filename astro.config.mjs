@@ -6,5 +6,6 @@ import sitemap from "@astrojs/sitemap";
 //https://astro.build/config
 export default defineConfig({
   site: 'https://rishibharadwajsai.vercel.app',
-  integrations: [tailwind(), sitemap()]
+  integrations: [tailwind(), sitemap()],
+  output: 'static'
 });
