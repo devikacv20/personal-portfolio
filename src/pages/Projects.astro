@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<Layout title="Projects - Devika">
+  <div
+    class="max-w-screen-xl flex flex-wrap mx-auto mt-10 rounded justify-center lg:justify-start slide-up"
+  >
+    <ProjectCard
+      title="To-Do List"
+      description="Developed a backend-based To-Do List application using Python and Django, implementing CRUD operations, user authentication, and task management."
+      link="#"
+      github="https://github.com/devikacv20/To-Do-List"
+      image="/images/todolist.png"
+    />
+    <ProjectCard
+      title="URL Shortening Service"
+      description="Built a URL Shortening Service using Python and Django that generates compact, shareable links with redirect functionality and usage tracking."
+      link="#"
+      github="https://github.com/devikacv20/URL-Shortening"
+      image="/images/urlshortner.jpg"
+    />
+    <ProjectCard
+      title="Simple E-commerce Site"
+      description="Created a simple e-commerce website using Python and Django, featuring product listings, user authentication, shopping cart, and order management."
+      link="#"
+      github="https://github.com/devikacv20/E-commerce-Site"
+      image="/images/ecommerce.jpg"
+    />
+    <ProjectCard
+      title="Speech Emotion Recognition"
+      description="Developed a Speech Emotion Recognition system using ML models, achieving 89% accuracy by extracting MFCCs and Mel Spectrograms from 25,000+ audio files to classify emotions like happy, sad, angry, and neutral."
+      link="https://github.com/devikacv20/Speech-Emotion-Recognition"
+      github="https://github.com/devikacv20/Speech-Emotion-Recognition"
+      image="/images/speechemotion.jpg"
+    />
+    
+    <ProjectCard
+      title="Contact Book API"
+      description="A digital address book system that allows storing, updating and removing contact details via API andpoints. Each contact includes name, phone number, and email, managed through structured HTTP request."
+      link="https://github.com/devikacv20/Contact-Book-API"
+      github="https://github.com/devikacv20/Contact-Book-API"
+      image="/images/contact-app-api.png"
+    />
+    <ProjectCard
+      title="Real-time Polling App"
+      description="Allows users to create polls, vote and view live results instantly without page reload. Real-time updates were enabled using Websockets via django Channels along with REST APIs for poll operations."
+      link="https://github.com/devikacv20/Polling-APP"
+      github="https://github.com/devikacv20/Polling-APP"
+      image="/images/poll-app.png"
+    />
+    <ProjectCard
+      title="Music Playlist Manager - Linkedlist Implementation"
+      description="A Music playlist structure where users can go to the next or previous song, similar to a real media player. Logic was based on singly linked list to manage track order and move efficiently."
+      link="https://github.com/devikacv20/Music-Playlist-Manager"
+      github="https://github.com/devikacv20/Music-Playlist-Manager"
+      image="/images/music-playlist.png"
+    />
+    <ProjectCard
+      title="SAR Image Colorization"
+      description="Developing a deep learning solution under Smart India Hackathon 2024 to convert grayscale SAR (Synthetic Aperture Radar) images into meaningful color images for better analysis in the Space & Research domain."
+      image="/images/SAR-image.png"
+    />
+  </div>
+</Layout>
+
+<style>
+  .slide-up {
+    transform: translateY(-50%);
+    opacity: 0;
+    animation: slideUp 1s forwards;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>

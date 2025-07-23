@@ -1,0 +1,59 @@
+---
+import Card from "./Card.astro";
+---
+
+<div class="max-w-screen-xl flex flex-wrap mx-auto mt-10 rounded">
+  <h1 class="text-white text-2xl ps-4 my-4 font-extrabold whatido-title">
+    My Interests
+  </h1>
+  <div class="flex flex-wrap ps-4 slide-up">
+    <Card
+      title="Data Structures and Algorithms"
+      body="Actively learning Data Structures and Algorithms, solving problems on platforms like LeetCode and CodeChef to strengthen problem-solving and coding skills."
+      src="/images/dsa.png"
+    />
+    <Card
+      title="Backend Developer"
+      body="Focused on backend development, building robust APIs and web applications using Python frameworks like Django and Flask, with experience in database integration and RESTful services."
+      src="/images/backend.png"
+    />
+    
+    <Card
+      title="Classical Dancer"
+      body="Trained classical dancer with a deep appreciation for traditional art forms, balancing creativity with discipline through regular practice and performances."
+      src="/images/dance.png"
+    />
+  </div>
+</div>
+
+<style>
+  .whatido-title {
+    position: relative;
+  }
+
+  .whatido-title::before {
+    position: absolute;
+    content: " ";
+    top: 35px;
+    background-color: white;
+    width: 50%;
+    height: 4px;
+  }
+
+  .slide-up {
+    transform: translateY(-50%);
+    opacity: 0;
+    animation: slideUp 2s forwards;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>

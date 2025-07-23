@@ -1,0 +1,69 @@
+---
+import WhatIDo from "../components/WhatIDo.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Portfolio - Devika C V">
+  <div class="max-w-screen-xl flex flex-wrap mx-auto mt-10 rounded">
+    <h1 class="text-white text-2xl ps-4 my-4 font-extrabold about-title">
+      About Me
+    </h1>
+    <div class="ps-4 relative my-10 flex flex-wrap">
+      <div class="h-4 w-4 circle top-[-15px] left-[9px]"></div>
+      <div class="text-white border-l-2 border-white p-2">
+        <p class="leading-relaxed text-justify font-normal slide-in -z-10">
+          I’m a B.Tech student in Artificial Intelligence and Data Science at 
+          KIT Kalaignarkarunanidhi Institute of Technology. I have a strong 
+          interest in backend development and enjoy building web applications using 
+          frameworks like Django and Flask. To strengthen my problem-solving skills, 
+          I actively practice Data Structures and Algorithms on platforms like LeetCode 
+          and CodeChef. I'm passionate about learning, experimenting with new technologies, 
+          and applying my knowledge through hands-on projects and internships.
+        </p>
+        <br />
+        
+      </div>
+      <div class="h-4 w-4 circle bottom-[-15px] left-[9px]"></div>
+    </div>
+  </div>
+
+  <WhatIDo />
+</Layout>
+
+<style>
+  .about-title {
+    position: relative;
+  }
+
+  .about-title::before {
+    position: absolute;
+    content: " ";
+    top: 35px;
+    background-color: white;
+    width: 45%;
+    height: 4px;
+  }
+
+  .circle {
+    border: 2px solid white;
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  .slide-in {
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: slideIn 1s forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+</style>
